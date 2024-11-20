@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="plus_b.css"> <!--버튼 스타일 파일-->
+        <script type="text/javascript">
+           function addBox() { 
+            var name = prompt("상자의 이름을 입력하세요:");
+            if (name) { var newBox = document.createElement("div"); 
+            newBox.className = "box"; var nameLabel = document.createElement("p"); 
+            nameLabel.className = "box-name"; 
+            nameLabel.textContent = name; 
+            newBox.appendChild(nameLabel); 
+            document.body.appendChild(newBox); 
+            }
+        }
+        document.addEventListener('keydown', function(event) { 
+                if (event.code === 'Space') { 
+                    alert('페트병에 물을 채워주세요'); 
+                } 
+            });
+        </script>
+    </head>
+    <li class='no_dot'><button class="custom-btn btn-10" onclick="addBox()">+</button></li>
+</html>
